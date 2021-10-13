@@ -4,3 +4,4 @@ httplib2
 prettytable
 pytest
 pytz
+pytest-cov

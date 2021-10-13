@@ -28,7 +28,9 @@ jobs:
         pip install -r requirements-dev.txt
     - name: Test with pytest
       run: |
+        pushd tests
         docker-compose up -d
         sleep 60
-        pytest -s -v
-      working-directory: tests
+        popd
+        pytest -s -v --cov=./nebula2/ --cov-report=xml
+        bash <(curl -s https://codecov.io/bash)
