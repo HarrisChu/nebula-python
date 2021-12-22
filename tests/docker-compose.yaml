@@ -397,7 +397,7 @@ services:
       - sh
       - -c
       - |
-        for i in `seq 1 20`;do
+        for i in `seq 1 20`;do 
           nebula-console -addr graphd0 -port 9669 -u root -p nebula -e 'ADD HOSTS "172.28.2.1":9779,"172.28.2.2":9779,"172.28.2.3":9779'
           if [ $? -eq 0 ];then
             break
@@ -405,7 +405,6 @@ services:
           sleep 1
           echo "retry to add hosts"
         done 
-        && sleep 36000
     depends_on:
       - graphd0
     networks:
