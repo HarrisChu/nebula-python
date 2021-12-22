@@ -1,0 +1,6 @@
+ignore:
+  - "nebula2/common"
+  - "nebula2/fbthrift"
+  - "nebula2/meta"
+  - "nebula2/storage"
+  - "nebula2/graph"
