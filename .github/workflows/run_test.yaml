@@ -50,5 +50,5 @@ jobs:
         working-directory: tests
       - uses: codecov/codecov-action@v2
         with:
-          files: ./coverage.xml
+          files: ./tests/coverage.xml
         
